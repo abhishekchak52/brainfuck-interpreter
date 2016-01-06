@@ -8,7 +8,7 @@ class Turing {
     char *d;
     const char *p;
 	Turing(const char[]);
-	void bropen();
-	void brclose();
-	void evaluate();
+	void br_open();
+	void br_close();
+	void interpret();
 };

@@ -8,7 +8,7 @@ Turing::Turing(const char prog[])
 	p = prog;
 }
 
-void Turing::bropen() {
+void Turing::br_open() {
 	int bal = 1;
     if (*d == '\0') {
 	    do {
@@ -18,7 +18,7 @@ void Turing::bropen() {
 	        } while ( bal != 0 );
 	      }
 }
-void Turing::brclose() {
+void Turing::br_close() {
 	int bal = 0;
     do {
        if      (*p == '[') bal++;
@@ -27,7 +27,7 @@ void Turing::brclose() {
     } while ( bal != 0 );
 }
 
-void Turing::evaluate() {
+void Turing::interpret() {
    while (*p) {
       switch (*p) {
          case '>':
@@ -49,14 +49,12 @@ void Turing::evaluate() {
             cin >> *d;
             break;
          case '[':
-            bropen();
+            br_open();
             break;
          case ']':
-            brclose();
+            br_close();
             break;
         }
         p++;
       }
 }
-
-

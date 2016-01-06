@@ -7,11 +7,11 @@ int main(int argc, const char* argv[]) {
 	// File handling
 	ifstream program(argv[1],ios::in);
 	while(program)
-	{	
+	{
 		program.get(*(ptr++));
 	}
-	
+
     Turing interpreter = Turing(prog);
-    interpreter.evaluate();
+    interpreter.interpret();
 return 0;
 }
